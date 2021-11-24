@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/Favicon.png" type="image/x-icon">
+    <title>Spotify - Home</title>
+</head>
+<body>
+    <div class="all">
+        <div class="sides">
+            <div class="leftSide">
+                <div id="homeAbout">
+                    <ul id="homeAboutList">
+                        <li><img id="homeAboutImg" src="/images/Spotify Logo.png" alt="spotify-logo"><span id="homeAboutImgText">Spotify</span></li>
+                        <li><a href=""><i id="homeIcon" class="material-icons">home</i><span id="homeAboutAloneText"> Home</span></a></li>
+                        <li><a href=""><i id="aboutIcon" class="material-icons">info</i><span id="homeAboutAloneText"> About</span></a></li>
+                    </ul>
+                </div>
+                <hr class="hrLeft">
+                <div id="expandsContainer">
+                    <div id="albums">
+                        <span id="AlbumDrop"><h2>ALBUMS <i class="material-icons" id="expandAlbums">expand_more</i></h2></span>
+                        <span id="AlbumArtistDrop"><h3><a href="https://open.spotify.com/artist/4AK6F7OLvEQ5QYCBNiQWHq" target="_blank">One Direction </a><i class="material-icons" id="expandOneD">expand_more</i></h3></span>
+                        <div id="albumList">
+                            <h4 class="album">Four</h4>
+                            <h4 class="album">Made In The A.M.</h4>
+                            <h4 class="album">Midnight Memories</h4>
+                            <h4 class="album">Take Me Home</h4>
+                            <h4 class="album">Up All Night</h4>
+                        </div>
+                    </div>
+                    <hr class="hrLeft">
+                    <div id="playlists">
+                        <span id="PlaylistDrop"><h2>PLAYLISTS <i class="material-icons" id="expandPlaylists">expand_more</i></h2></span>
+                        <div id="playListList">
+                            <h4 class="playlist">||Songs||</h4>
+                            <h4 class="playlist">Shawn Mendes</h4>
+                            <h4 class="playlist">One Republic</h4>
+                        </div>
+                    </div>
+                    <hr class="hrLeft">
+                    <div id="others">
+                        <span id="othersDrop"><h2>OTHERS <i class="material-icons" id="expandOthers">expand_more</i></h2></span>
+                        <div id="othersList">
+                            <div id="microsoft">
+                                <span id="othersItem"><h3>Microsoft <i class="material-icons" id="expandMicrosoft">expand_more</i></h3></span>
+                                <div id="microsoftList" class="othersLists">
+                                    <h4 class="microsoftItem">Office</h4>
+                                    <h4 class="microsoftItem">Teams</h4>
+                                    <h4 class="microsoftItem">OneDrive</h4>
+                                    <h4 class="microsoftItem">SharePoint</h4>
+                                </div>
+                            </div>
+                            <div id="school">
+                                <span id="othersItem"><h3>School <i class="material-icons" id="expandSchool">expand_more</i></h3></span>
+                                <div id="schoolList" class="othersLists">
+                                    <h4 class="schoolItem">Grade 8</h4>
+                                    <h4 class="schoolItem">Grade 9</h4>
+                                </div>
+                            </div>
+                            <div id="movies">
+                                <span id="othersItem"><h3>Movie Lists <i class="material-icons" id="expandMovies">expand_more</i></h3></span>
+                                <div id="moviesList" class="othersLists">
+                                    <h4 class="movieItem">Marvel Movies</h4>
+                                    <h4 class="movieItem">Spider Man Movies</h4>
+                                    <h4 class="movieItem">Star Wars Movies</h4>
+                                </div>
+                            </div>
+                            <span id="othersItem"><h3>Todo List</span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hrLeft"> 
+            </div>
+            <div class="rightSide">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="expand.js"></script>
+</body>
+</html>

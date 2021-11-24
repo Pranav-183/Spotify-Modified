@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN */
+
+.all {
+    display: flex;
+    flex-direction: column;
+}
+
+.sides {
+    display: flex;
+    flex-direction: row;
+}
+
+i {
+    cursor: default;
+}
+
+/* LEFT SIDE */
+
+.leftSide {
+    height: 690px;
+    width: 230.4px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.hrLeft {
+    width: 200px;
+    margin-left: 12px;
+    height: 0.00001px;
+    margin-bottom: 15px;
+    border-top: 2px solid rgb(80, 80, 250);
+}
+
+#homeAbout {
+    height: 180px;
+    padding: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#albums {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#playlists {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* DESIGNING LEFT SIDE ELEMENTS */
+/* HOMEABOUT */
+
+#homeAboutList li {
+    cursor: pointer;
+    list-style: none;
+    height: 45px;
+    width: 13vw;
+    display: flex;
+    align-items: center;
+}
+
+#homeAboutList li:first-of-type {
+    margin-bottom: 10px;
+}
+
+#homeAboutList li:not(:first-of-type):hover {
+    background-color: #282828;
+}
+
+#homeAboutList i {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #b3b3b3;
+    font-size: 30px;
+}
+
+#homeAboutAloneText {
+    color: white;
+    position: relative;
+    bottom: 8px;
+}
+
+#homeAboutList a{
+    text-decoration: none;
+}
+
+#homeAboutImg {
+    width: 50px;
+}
+
+#homeAboutImgText {
+    position: relative;
+    left: 5.5px;
+    font-size: 30px;
+}
+
+/* ALBUMS */
+
+#albums span {
+    text-align: center;
+    transition: color 0.5s ease-in;
+}
+
+#albums span h3:hover {
+    cursor: pointer;
+}
+
+#albums i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+.album:nth-child(1) {
+    background: linear-gradient(10deg, rgb(158, 155, 155), #282828);
+}
+
+#OneDDrop {
+    display: none;
+}
+
+#albumList {
+    color: rgb(201, 199, 199);
+    margin-top: 15px;
+    text-align: center;
+    line-height: 25px;
+    transition: color 0.3s ease-in;
+    display: none;
+}
+
+#albumList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+#albumList h4:nth-child(1):hover {
+    cursor: default;
+}
+
+#activeAlbumIcon {
+    margin-left: 5px;
+    font-size: 20px;
+    color: rgb(5, 253, 5);
+}
+
+/* PLAYLISTS */
+
+#playlists span {
+    text-align: center;
+}
+
+#playListList {
+    color: rgb(228, 226, 226);
+    margin-top: 15px;
+    text-align: center;
+    line-height: 25px;
+    transition: color 0.3s ease-in;
+    display: none;
+}
+
+#playListList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+#playlists i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+
+.scrollbar::-webkit-scrollbar {
+    background-color: inherit;
+    width: 12px;
+    max-height: 30px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+.scrollbar::-webkit-scrollbar-track:hover {
+    background-color: #575555;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #97979c;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a5;
+}
+
+.scrollbar::-webkit-scrollbar-button {
+    display: none;
+}
+
+.scrollbar {
+    height: 690px;
+    width: 100vw;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+.rightSide {
+    height: 690px;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#rightTop {
+    background: linear-gradient(to right, rgb(83, 83, 83), rgb(0, 0, 0));
+    height: 300px;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    padding: 4vh;
+}
+
+#rightBottom {
+    color: white;
+    background-color: #1a1a1a;
+    height: 690px;
+    font-family: 'Varela Round', sans-serif;
+    padding: 0 0 30px 0;
+}
+
+.hrRight {
+    width: 80vw;
+    height: 0.000001px;
+    margin: 10px auto;
+    border-top: 2px solid #6b6b6b;
+}
+
+/* DESIGNING RIGHT SIDE ELEMENTS */
+/* RIGHT TOP */
+
+#rightTopImgContainer {
+    margin-top: 30px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rightTopImg {
+    width: 232px;
+    height: 232px;
+}
+
+#rightTopText {
+    color: white;
+    width: 1002px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+#rightTopText h1 {
+    font-size: 5rem;
+    margin-bottom: 5px;
+}
+
+#rightTopText h4 {
+    margin-bottom: 5px;
+}
+
+.rightTopTextInfo {
+    display: flex;
+}
+
+.rightTopTextInfo h5 {
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.rightTopTextInfo a {
+    text-decoration: none;
+    color: white;
+}
+
+.rightTopTextInfo a:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT BOTTOM */
+
+.songTitles {
+    margin-top: 30px;
+    color: #b3b3b3;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.TitleHashtag {
+    margin-left: 60px;
+    margin-right: 10vw;
+    font-size: larger;
+}
+
+.titleDuration {
+    margin-left: auto;
+    margin-right: 7vw;
+    font-size: smaller;
+}
+
+/* SONGLIST */
+
+.songItem {
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    width: 80vw;
+}
+
+.songItem:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.songItem:hover .songNumber {
+    display: none;
+}
+
+.songItem:hover .playIcon1 {
+    display: block;
+}
+
+.songIconOrNumber {
+    display: flex;
+    margin-left: 60px;
+}
+
+.songNumber {
+    color: #b3b3b3;
+}
+
+.playIcon1 {
+    display: none;
+    margin: 0 -10px 0 -5px;
+}
+
+.pauseIcon1 {
+    display: none;
+    margin: 0 -10px 0 -5px;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+.songName {
+    margin-left: 46px;
+}
+
+.gif {
+    display: none;
+}
+
+.gif > img {
+    width: 44px;
+}
+
+.songDuration {
+    margin-left: auto;
+    margin-right: 1.3vw;
+}
+
+/* BOTTOM BAR */
+
+#bottomBar {
+    height: 100px;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: row;
+}
+
+#songInfo {
+    width: 28vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#controls {
+    width: 45vw;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#volumeBarContainer {
+    width: 27vw;
+    height: 100px;
+}
+
+/* ELEMENTS OF BOTTOM BAR */
+/* SONGINFO */
+
+#songInfoImgContainer {
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#songInfoImg {
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+}
+
+#songInfoTextContainer {
+    margin-top: 3vh;
+    width: 22vw;
+    color: white;
+}
+
+#songInfoName {
+    font-size: 19px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1vh;
+}
+
+#songInfoArtist a {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+#songInfoArtist a:hover {
+    text-decoration: underline;
+}
+
+/* CONTROLS */
+
+#icons {
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottomBarPlayPause {
+    font-size: 40px;
+    color: white;
+    margin: 13px;
+    cursor: default;
+}
+
+#bottomBarPlayPause:hover {
+    font-size: 43px;
+    margin: 11.5px;
+}
+
+#previous, #next {
+    color: #b3b3b3;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+#previous:hover, #next:hover {
+    color: white;
+}
+
+#progressBarContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5vh;
+}
+
+#progressBar {
+    width: 35vw;
+    height: 6px;
+}
+
+#volumeBarContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 4vw;
+}
+
+#volumeBar {
+    width: 10vw;
+    height: 6px;
+}
+
+#volumeIcon {
+    color: #d3d3d3;
+    cursor: default;
+    margin-right: 0.6vw;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+#volumeIcon:hover {
+    color: white;
+}

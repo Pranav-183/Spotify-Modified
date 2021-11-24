@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sides {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSide {
+    height: 790px;
+    width: 230.4px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.rightSide {
+    height: 790px;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.hrLeft {
+    width: 200px;
+    margin-left: 12px;
+    height: 0.00001px;
+    margin-bottom: 15px;
+    border-top: 2px solid rgb(80, 80, 250);
+}
+
+#homeAbout {
+    height: 150px;
+    padding: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#albums {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    transition: height 0.3s ease;
+}
+
+#playlists {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    transition: height 0.3s ease;
+}
+
+#others {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    transition: height 0.3s ease;
+}
+
+/* SCROLLBAR */
+
+#others {
+    overflow-y: auto;
+}
+
+#others::-webkit-scrollbar {
+    background-color: inherit;
+    width: 10px;
+}
+
+#others::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+#others::-webkit-scrollbar-track:hover {
+    background-color: #3b3a3a;
+}
+
+#others::-webkit-scrollbar-thumb {
+    background-color: #5c5c5f;
+    border-radius: 10px;
+}
+
+#others::-webkit-scrollbar-thumb:hover {
+    background-color: #6b6b6d;
+}
+
+#others::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* DESIGNING LEFT SIDE ELEMENTS */
+/* HOMEABOUT */
+
+#homeAboutList li {
+    cursor: pointer;
+    list-style: none;
+    height: 45px;
+    width: 13vw;
+    display: flex;
+    align-items: center;
+}
+
+#homeAboutList li:nth-child(2) {
+    background-color: #3b3b3b;
+}
+
+#homeAboutList li:first-of-type {
+    margin-bottom: 10px;
+}
+
+#homeAboutList li:not(:first-of-type):hover {
+    background-color: #282828;
+}
+
+#homeAboutList i {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 30px;
+}
+
+#homeAboutAloneText {
+    color: white;
+    position: relative;
+    bottom: 8px;
+}
+
+#homeAboutList a {
+    text-decoration: none;
+}
+
+#homeAboutImg {
+    width: 50px;
+}
+
+#homeAboutImgText {
+    position: relative;
+    left: 5.5px;
+    font-size: 30px;
+}
+
+/* ALBUMS */
+
+#AlbumArtistDrop {
+    display: none;
+}
+
+#AlbumArtistDrop a {
+    color: white;
+    text-decoration: none;
+}
+
+#albums span {
+    text-align: center;
+    transition: color 0.5s ease-in;
+}
+
+#albums span h3:hover {
+    cursor: pointer;
+}
+
+#albums i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+#albumList {
+    color: #e4e2e2;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    transition: color 0.3s ease-in;
+    display: none;
+    height: 125px;
+}
+
+#albumList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+/* PLAYLISTS */
+
+#playlists span {
+    text-align: center;
+}
+
+#playListList {
+    color: rgb(228, 226, 226);
+    margin-top: 15px;
+    text-align: center;
+    line-height: 30px;
+    transition: color 0.3s ease-in;
+    display: none;
+}
+
+#playListList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+#playlists i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+/* OTHERS */
+
+#othersDrop h2 {
+    margin-bottom: 9px;
+}
+
+#others span {
+    text-align: center;
+}
+
+#others i:first-child {
+    cursor: pointer;
+    position: relative;
+    top: 3.5px;
+}
+
+#othersList {
+    color: #e4e2e2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 17px;
+    transition: color 0.3 ease-in;
+    display: none;
+}
+
+#othersItem {
+    color: #f5f4f4;
+}
+
+#othersList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+.othersLists {
+    color: #e4e2e2;
+}
+
+.redLine {
+    width: 150px;
+    height: 0.00001px;
+    border-top: 1px solid red;
+    margin: 0 auto;
+}
+
+/* MICROSOFT */
+
+#microsoft {
+    height: 32px;
+    transition: height 0.3s ease;
+}
+
+#microsoftList {
+    color: #e4e2e2;
+    display: none;
+}
+
+/* SCHOOL */
+
+#school {
+    height: 32px;
+    transition: height 0.3s ease;
+}
+
+#schoolList {
+    color: #e4e2e2;
+    display: none;
+}
+
+/* MOVIES */
+
+#movies {
+    height: 32px;
+    transition: height 0.3s ease;
+}
+
+#moviesList {
+    color: #e4e2e2;
+    display: none;
+}
