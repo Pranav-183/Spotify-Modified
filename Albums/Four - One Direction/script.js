@@ -1,11 +1,11 @@
-console.log('Welcome To Spotify');
+console.log('Welcome To Spotify')
 
 document.addEventListener('DOMContentLoaded', () => {
-    volumeBar.value = localStorage.getItem('AlbumFourLocalVolume');
+    volumeBar.value = localStorage.getItem('AlbumFourLocalVolume')
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    songIndex = localStorage.getItem('AlbumFourAudioSource');
+    songIndex = localStorage.getItem('AlbumFourAudioSource')
 })
 
 // CONSTANTS

@@ -195,14 +195,11 @@
 #filterInput {
     width: 600px;
     height: 40px;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
+    padding-left: 30px;
     background-color: #ebe9e9;
     font-size: 1.2rem;
     border-radius: 30px;
-}
-
-#filterInput::placeholder {
-    padding-left: 20px;
 }
 
 /* SCROLLBAR  */
@@ -238,7 +235,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    width: 1100px;
+    width: 72vw;
     height: 50px;
     background-color: inherit;
     margin: 2vh auto;
@@ -258,8 +255,11 @@
     opacity: 0.5;
 }
 
-.container:hover .songCoverPlay {
-    visibility: visible;
+.container:hover .songPlause {
+    display: block !important;
+    position: relative;
+    left: 12px;
+    bottom: 38px;
 }
 
 .songCovers {
@@ -267,17 +267,17 @@
     margin: 2px 0 0 2px;
 }
 
-.songCoverPlay {
+.songPlause {
     color: white;
     position: relative;
-    left: -34px;
+    left: -35px;
     bottom: 10px;
     cursor: pointer;
-    visibility: hidden;
+    display: none !important;
 }
 
 .songName {
-    margin: auto 0 auto 1vw;
+    margin: auto 0 auto 2vw;
 }
 
 .songName > a {

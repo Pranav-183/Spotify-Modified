@@ -53,7 +53,6 @@ const filterArea = document.getElementById('filterArea')
 const searchBar = document.forms['filterForm'].querySelector('input')
 const resultArea = document.getElementById('resultArea')
 const container = document.getElementsByClassName('container')
-const songCoverPlay = document.getElementsByClassName('songCoverPlay')
 const songName = document.getElementsByClassName('songName')
 
 function searchResult(index) {
@@ -70,11 +69,11 @@ function searchResult(index) {
     songCovers.alt = 'cover'
     songCovers.classList.add('songCovers')
     songCover.appendChild(songCovers)
-    const songCoverPlay = document.createElement('i')
-    songCoverPlay.classList.add('material-icons')
-    songCoverPlay.classList.add('songCoverPlay')
-    songCoverPlay.innerText = 'play_arrow'
-    songCover.appendChild(songCoverPlay)
+    const songPlause = document.createElement('i')
+    songPlause.classList.add('material-icons')
+    songPlause.classList.add('songPlause')
+    songPlause.innerText = 'play_arrow'
+    songCover.appendChild(songPlause)
     // songNameAndArtist
     const songName = document.createElement('div')
     songName.classList.add('songName')
@@ -102,7 +101,19 @@ searchBar.addEventListener('keyup', function(e) {
     })
 })
 
+/* <div class="container">
+        <div class="songCover">
+            <img src="../images/Up All Night.jpg" alt="cover" class="songCovers">
+            <i class="material-icons songPlause">play_arrow</i>
+        </div>
+        <div class="songName">
+            Stole My Heart - 
+            <a href="" class="songArtist">One Direction</a>
+        </div>
+        <div class="songDuration">03:23</div>
+    </div> */
+
 songs.forEach((element, i) => {
     searchResult(i)
-    container[i].style.display = 'none'
+    // container[i].style.display = 'none'
 })
