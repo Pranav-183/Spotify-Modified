@@ -276,6 +276,13 @@
     display: none !important;
 }
 
+.iconPause {
+    display: block !important;
+    position: relative;
+    left: 12px;
+    bottom: 38px;
+}
+
 .songName {
     margin: auto 0 auto 2vw;
 }
@@ -378,14 +385,24 @@
     margin: 11.5px;
 }
 
-#previous, #next {
+#previous, #next, #shuffle, #repeat {
     color: #b3b3b3;
     cursor: default;
     transition: color 0.3s ease;
 }
 
-#previous:hover, #next:hover {
+#previous:hover, #next:hover, #shuffle:hover, #repeat:hover {
     color: white;
+}
+
+#shuffle {
+    font-size: 19px;
+    margin-left: 0.7vw;
+}
+
+#repeat {
+    font-size: 23px;
+    margin-right: 0.8vw;
 }
 
 #progressBarContainer {

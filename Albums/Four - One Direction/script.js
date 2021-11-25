@@ -1,7 +1,7 @@
 console.log('Welcome To Spotify')
 
 document.addEventListener('DOMContentLoaded', () => {
-    volumeBar.value = localStorage.getItem('AlbumFourLocalVolume')
+    volumeBar.value = localStorage.getItem('LocalVolume')
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -185,7 +185,7 @@ const volumeIconChange = () => {
 }
 
 const saveLocalVolume = (storedVolume) => {
-    localStorage.setItem('AlbumFourLocalVolume', storedVolume);
+    localStorage.setItem('LocalVolume', storedVolume);
 }
 
 const saveLocalAudioSrcNumber = (audioSrcNumber) => {
