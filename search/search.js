@@ -74,14 +74,19 @@ const volumeBar = document.getElementById('volumeBar')
 const bottomBarPlayPause = document.getElementById('bottomBarPlayPause')
 const previous = document.getElementById('previous')
 const next = document.getElementById('next')
+const repeat = document.getElementById('repeat')
+const shuffle = document.getElementById('shuffle')
 const title = document.getElementsByTagName('title')
 const progressBar = document.getElementById('progressBar')
 const audioElement = new Audio(`../songs/${songs[0].songName}.mp3`)
 const body = document.querySelector('body')
 let songIndex = JSON.parse(localStorage.getItem('BottomBarInfo'))[3]
+let repeatStatus = false
+let shuffleStatus = false
+let randomNumberArray = []
 
 // Initialise Containers
-
+{
 const searchResult = (index) => {
     // container
     const container = document.createElement('div')
@@ -118,6 +123,7 @@ songs.forEach((element, i) => {
     searchResult(i)
     container[i].style.display = 'none'
 })
+}
 
 // Search For Songs
 
@@ -209,6 +215,34 @@ const previousFunc = () => {
     title.innerText = `${songs[songIndex].songName} - ${songInfoArtistName.innerText}`
 }
 
+const repeatFunc = () => {
+    nextFunc()
+    previousFunc()
+    repeatStatus = false
+}
+
+const randomNumberList = () => {
+    for (let i = 0; i < songs.length; i++) {
+        let rand = Math.floor(Math.random() * (songs.length - 1))
+        randomNumberArray.push(rand)
+    }
+}
+
+const shuffleFunc = () => {
+    randomNumberList()
+    for (let i = 0; i < songs.length; i++) {
+        songIndex = randomNumberArray[i]       
+    }
+    songIndex = Math.floor(Math.random() * parseInt(songs.length - 1))
+    songInfoName.innerText = songs[songIndex].songName
+    songInfoImg.src = songs[songIndex].coverPath
+    songInfoArtistName.innerText = songs[songIndex].artistName
+    audioElement.src = `../songs/${songs[songIndex].songName}.mp3`
+    audioElement.play()
+    console.log(songIndex)
+    SaveBottomBarInfo(songInfoName.innerText, songInfoImg.src, songInfoArtistName.innerText, songIndex)
+}
+
 // Play Songs After Search
 
 const songPlause = Array.from(document.getElementsByClassName('songPlause'))
@@ -272,8 +306,6 @@ progressBar.onchange = () => {
 
 // Event Listening
 
-audioElement.onended = () => nextFunc()
-
 bottomBarPlayPause.onclick = () => bottomBarPlayPauseFunc()
 document.addEventListener('keyup', (e) => {
     if (e.code === 'Space' && keyboardFocus != true) {
@@ -286,16 +318,90 @@ document.addEventListener('keyup', (e) => {
     }
 })
 
-next.onclick = () => nextFunc()
+next.onclick = () => {
+    if (shuffleStatus == false && repeatStatus == false) {
+        nextFunc()
+    } else if (shuffleStatus == true && repeatStatus == false) {
+        shuffleFunc()
+    } else if (shuffleStatus == false && repeatStatus == true) {
+        repeatFunc()
+    } else if (shuffleStatus == true && repeatStatus == true) {
+        repeatFunc()
+        shuffleFunc()
+    }
+}
 document.addEventListener('keyup', (e) => {
     if (e.key === 'l' && keyboardFocus != true) {
-        nextFunc()
+        if (shuffleStatus == false && repeatStatus == false) {
+            nextFunc()
+        } else if (shuffleStatus == true && repeatStatus == false) {
+            shuffleFunc()
+        } else if (shuffleStatus == false && repeatStatus == true) {
+            repeatFunc()
+        } else if (shuffleStatus == true && repeatStatus == true) {
+            repeatFunc()
+            shuffleFunc()
+        }
     }
 })
 
-previous.onclick = () => previousFunc()
+previous.onclick = () => {
+    if (shuffleStatus == false && repeatStatus == false) {
+        previousFunc()
+    } else if (shuffleStatus == true && repeatStatus == false) {
+        shuffleFunc()
+    } else if (shuffleStatus == false && repeatStatus == true) {
+        repeatFunc()
+    } else if (shuffleStatus == true && repeatStatus == true) {
+        repeatFunc()
+        shuffleFunc()
+    }
+}
 document.addEventListener('keyup', (e) => {
     if (e.key === 'j' && keyboardFocus != true) {
+        if (shuffleStatus == false && repeatStatus == false) {
+            previousFunc()
+        } else if (shuffleStatus == true && repeatStatus == false) {
+            shuffleFunc()
+        } else if (shuffleStatus == false && repeatStatus == true) {
+            repeatFunc()
+        } else if (shuffleStatus == true && repeatStatus == true) {
+            repeatFunc()
+            shuffleFunc()
+        }
+    }
+})
+
+repeat.onclick = () => {
+    if (repeatStatus == false) {
+        repeat.style.color = 'rgb(7, 204, 7)'
+        repeatStatus = true
+    } else {
+        repeat.style.color = '#b3b3b3'
+        repeatStatus = false
+    }
+}
+
+shuffle.onclick = () => {
+    if (shuffleStatus == false) {
+        shuffle.style.color = 'rgb(7, 204, 7)'
+        shuffleStatus = true
+    } else {
+        shuffle.style.color = '#b3b3b3'
+        shuffleStatus = false
+    }
+}
+
+audioElement.addEventListener('ended', () => {
+    if (repeatStatus == false && shuffleStatus == false) {
+        nextFunc()
+    } else if (repeatStatus == true && shuffleStatus == false) {
+        repeatFunc()
+    } else if (shuffleStatus == true && repeatStatus == false) {
+        shuffleFunc()
+    } else if (shuffleStatus == true && repeatStatus == true) {
+        nextFunc()
         previousFunc()
+        shuffleFunc()
     }
 })

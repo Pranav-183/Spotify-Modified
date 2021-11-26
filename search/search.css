@@ -398,11 +398,13 @@
 #shuffle {
     font-size: 19px;
     margin-left: 0.7vw;
+    transition: color 0.3s ease-in;
 }
 
 #repeat {
     font-size: 23px;
     margin-right: 0.8vw;
+    transition: color 0.3s ease-in;
 }
 
 #progressBarContainer {
@@ -433,9 +435,17 @@
     cursor: default;
     margin-right: 0.6vw;
     font-size: 1.2rem;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
-#volumeIcon:hover {
+#volumeIcon:hover, #queueIcon:hover {
     color: white;
+}
+
+#queueIcon {
+    color: #d3d3d3;
+    margin-right: 0.4vw;
+    font-size: 1.4rem;
+    cursor: default;
+    transition: color 0.3s ease;
 }
