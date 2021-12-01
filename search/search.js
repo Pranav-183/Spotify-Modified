@@ -59,6 +59,18 @@ const songs = [
     {songName: "Temporary Fix", coverPath: "../images/Made In The A.M.jpg", artistName: "One Direction", duration: "02:55"},
     {songName: "Long Way Down", coverPath: "../images/Made In The A.M.jpg", artistName: "One Direction", duration: "03:12"},
     {songName: "Never Enough", coverPath: "../images/Made In The A.M.jpg", artistName: "One Direction", duration: "03:33"},
+    {songName: "Counting Stars", coverPath: "../images/", artistName: "One Republic", duration: "04:20"},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
+    {songName: "", coverPath: "../images/", artistName: "One Republic", duration: ""},
 ]
 
 const filterArea = document.getElementById('filterArea')
@@ -184,7 +196,7 @@ const bottomBarPlayPauseFunc = () => {
 }
 
 const nextFunc = () => {
-    if (songIndex >= 47) {
+    if (songIndex >= parseInt(songs.length - 1)) {
         songIndex = 0
     } else {
         songIndex ++
@@ -201,7 +213,7 @@ const nextFunc = () => {
 
 const previousFunc = () => {
     if (songIndex <= 0) {
-        songIndex = 47
+        songIndex = parseInt(songs.length - 1)
     } else {
         songIndex --
     }

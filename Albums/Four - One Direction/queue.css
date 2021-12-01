@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&display=swap');
+
+/* RIGHT SIDE */
+
+#rightSide {
+  display: flex;
+  flex-direction: column;
+  height: 690px;
+  width: 1478px;
+  background-color: #1A1A1A;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  overflow-y: auto;
+}
+
+#queueElement {
+  margin: 100px 0 16px 30px;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+#nowPlayingElement, #nextSongsElement {
+  font-size: 16px;
+  margin: 0 0 15px 30px;
+  color: #b3b3b3;
+}
+
+#nowPlayingSong {
+  margin-bottom: 25px;
+}
+
+#albumName a {
+  text-decoration: none;
+  color: #b3b3b3;
+}
+#albumName a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+#songItemContainer {
+  height: 450px;
+}
+
+#rightSide::-webkit-scrollbar {
+  background-color: inherit;
+  width: 12px;
+  max-height: 30px;
+}
+
+#rightSide::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+}
+
+#rightSide::-webkit-scrollbar-track:hover {
+  background-color: #575555;
+}
+
+#rightSide::-webkit-scrollbar-thumb {
+  background-color: #97979c;
+}
+
+#rightSide::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a5;
+}
+
+#rightSide::-webkit-scrollbar-button {
+  display: none;
+}
+
+#nowPlayingSong .songNumber, #nowPlayingSong .songName {
+  color: #1DB954;
+}
+
+.songItem {
+  display: flex;
+  flex-direction: row;
+  width: 1175px;
+  height: 60px;
+  margin: 0 46px 0 36px;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.songItem:hover {
+  background-color: #FFFFFF33;
+}
+.songItem:hover .songNumberOrIcon {
+  height: 29px;
+}
+.songItem:hover .playIcon {
+  display: block;
+  margin: 0;
+}
+.songItem:hover .songNumber {
+  display: none;
+}
+.songItem:hover .songArtist a {
+  color: #fff;
+}
+
+.songNumberOrIcon {
+  margin: 0 20px 0 0;
+  cursor: default;
+  height: 24px;
+  width: 44px;
+  text-align: center;
+}
+
+.playIcon, .pauseIcon, .playingGif {
+  display: none;
+}
+
+.playingGif img {
+  width: 44px;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.displayBlock {
+  display: block !important;
+}
+
+.songNameArtist {
+  display: flex;
+  flex-direction: column;
+}
+
+.songName {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.songArtist {
+  font-size: 13.5px;
+}
+
+.songArtist a {
+  text-decoration: none;
+  color: #b9b7b7;
+}
+
+.songArtist a:hover {
+  text-decoration: underline;
+}
+
+.songCover {
+ margin: 0 25px 0 0; 
+}
+
+.songCover img {
+  width: 40px;
+}
+
+.songDuration {
+  margin: 0 20px 0 auto;
+}

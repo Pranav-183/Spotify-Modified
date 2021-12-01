@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sides {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftSide {
+    height: 690px;
+    width: 230.4px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#homeAbout {
+    height: 180px;
+    padding: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#albums {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#playlists {
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hrLeft {
+    width: 200px;
+    margin-left: 12px;
+    height: 0.00001px;
+    margin-bottom: 15px;
+    border-top: 2px solid rgb(80, 80, 250);
+}
+
+/* DESIGNING LEFT SIDE ELEMENTS */
+/* HOMEABOUT */
+
+#homeAboutList li {
+    cursor: pointer;
+    list-style: none;
+    height: 45px;
+    width: 13vw;
+    display: flex;
+    align-items: center;
+}
+
+#homeAboutList li:first-of-type {
+    margin-bottom: 10px;
+}
+
+#homeAboutList li:not(:first-of-type):hover {
+    background-color: #282828;
+}
+
+#homeAboutList i {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #b3b3b3;
+    font-size: 30px;
+}
+
+#homeAboutAloneText {
+    color: white;
+    position: relative;
+    bottom: 8px;
+}
+
+#homeAboutList a{
+    text-decoration: none;
+}
+
+#homeAboutImg {
+    width: 50px;
+}
+
+#homeAboutImgText {
+    position: relative;
+    left: 5.5px;
+    font-size: 30px;
+}
+
+/* ALBUMS */
+
+#albums span {
+    text-align: center;
+    transition: color 0.5s ease-in;
+}
+
+#albums span h3:hover {
+    cursor: pointer;
+}
+
+#albums i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}
+
+.album:nth-child(1) {
+    background: linear-gradient(10deg, rgb(158, 155, 155), #282828);
+}
+
+#OneDDrop {
+    display: none;
+}
+
+#albumList {
+    color: rgb(201, 199, 199);
+    margin-top: 15px;
+    text-align: center;
+    line-height: 25px;
+    transition: color 0.3s ease-in;
+    display: none;
+}
+
+#albumList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+#albumList h4:nth-child(1):hover {
+    cursor: default;
+}
+
+#activeAlbumIcon {
+    margin-left: 5px;
+    font-size: 20px;
+    color: rgb(5, 253, 5);
+}
+
+/* PLAYLISTS */
+
+#playlists span {
+    text-align: center;
+}
+
+#playListList {
+    color: rgb(228, 226, 226);
+    margin-top: 15px;
+    text-align: center;
+    line-height: 25px;
+    transition: color 0.3s ease-in;
+    display: none;
+}
+
+#playListList h4:hover {
+    cursor: pointer;
+    background-color: #282828;
+    color: white;
+}
+
+#playlists i {
+    position: relative;
+    top: 3.5px;
+    cursor: pointer;
+}

@@ -36,16 +36,28 @@ const gif = Array.from(document.getElementsByClassName('gif'));
 const songInfoName = document.getElementById('songInfoName');
 const title = document.querySelector('title');
 const songs = [
-    {songName: "Night Changes", filePath: "songs/1.mp3", duration: "04:00", number: "1"},
-    {songName: "Steal My Girl", filePath: "songs/2.mp3", duration: "03:48", number: "2"},
-    {songName: "18", filePath: "songs/3.mp3", duration: "04:08", number: "3"},
-    {songName: "Ready To Run", filePath: "songs/4.mp3", duration: "03:16", number: "4"},
-    {songName: "No Control", filePath: "songs/5.mp3", duration: "03:19", number: "5"},
-    {songName: "Once In A Lifetime", filePath: "songs/6.mp3", duration: "02:38", number: "6"},
-    {songName: "Stockholm Syndrome", filePath: "songs/7.mp3", duration: "03:34", number: "7"},
-    {songName: "Where Do Broken Hearts Go", filePath: "songs/8.mp3", duration: "03:49", number: "8"},
-    {songName: "Act My Age", filePath: "songs/9.mp3", duration: "03:18", number: "9"}
+    {songName: "Night Changes", artistName: "One Direction", albumName: "Four", filePath: "songs/1.mp3", duration: "04:00", number: "1"},
+    {songName: "Steal My Girl", artistName: "One Direction", albumName: "Four", filePath: "songs/2.mp3", duration: "03:48", number: "2"},
+    {songName: "18", artistName: "One Direction", albumName: "Four", filePath: "songs/3.mp3", duration: "04:08", number: "3"},
+    {songName: "Ready To Run", artistName: "One Direction", albumName: "Four", filePath: "songs/4.mp3", duration: "03:16", number: "4"},
+    {songName: "No Control", artistName: "One Direction", albumName: "Four", filePath: "songs/5.mp3", duration: "03:19", number: "5"},
+    {songName: "Once In A Lifetime", artistName: "One Direction", albumName: "Four", filePath: "songs/6.mp3", duration: "02:38", number: "6"},
+    {songName: "Stockholm Syndrome", artistName: "One Direction", albumName: "Four", filePath: "songs/7.mp3", duration: "03:34", number: "7"},
+    {songName: "Where Do Broken Hearts Go", artistName: "One Direction", albumName: "Four", filePath: "songs/8.mp3", duration: "03:49", number: "8"},
+    {songName: "Act My Age", artistName: "One Direction", albumName: "Four", filePath: "songs/9.mp3", duration: "03:18", number: "9"}
 ]
+console.log(songs);
+const setSongs = (songs) => {
+    let songsArray;
+    if (localStorage.getItem(songsArray)) {
+        songsArray = JSON.parse(localStrorage.getItem(songsArray));
+    } else {
+        songsArray = []
+    }
+    songsArray.push(songs);
+    localStorage.setItem('songsArray', JSON.stringify(songsArray));
+}
+setSongs(JSON.stringify(songs));
 
 // VARIABLES
 let songIndex = localStorage.getItem('AlbumFourAudioSource');
